@@ -10,6 +10,7 @@ const Register = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [gender, setGender] = useState("");
 
   const formSubmitHandler = (e) => {
     e.preventDefault();
@@ -42,14 +43,14 @@ const Register = () => {
       console.log(username);
       console.log(email);
       console.log(phoneNumber);
-      console.log(password);
-      console.log(confirmPassword);
+      console.log(gender);
       setFullName("");
       setUsername("");
       setEmail("");
       setPhoneNumber("");
       setPassword("");
       setConfirmPassword("");
+      setGender("");
     }
   };
 
@@ -127,8 +128,9 @@ const Register = () => {
                   type="radio"
                   id="male"
                   name="gender"
-                  value="MALE"
                   required
+                  checked={gender === "male"}
+                  onChange={() => setGender("male")}
                 />
                 <label for="male">Male</label>
               </div>
@@ -137,8 +139,9 @@ const Register = () => {
                   type="radio"
                   id="female"
                   name="gender"
-                  value="FEMALE"
                   required
+                  checked={gender === "female"}
+                  onChange={() => setGender("female")}
                 />
                 <label for="female">Female</label>
               </div>
@@ -147,8 +150,9 @@ const Register = () => {
                   type="radio"
                   id="nottosay"
                   name="gender"
-                  value="NOTTOSAY"
                   required
+                  checked={gender === "nottosay"}
+                  onChange={() => setGender("nottosay")}
                 />
                 <label for="nottosay">Prefer not to say</label>
               </div>
