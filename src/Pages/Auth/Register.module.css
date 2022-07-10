@@ -13,6 +13,13 @@
   padding: 10px;
 }
 
+/* .form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
+
 .formHeading {
   margin: 25px;
 }
@@ -22,7 +29,7 @@
   font-weight: 500;
 }
 
-.formHeading div {
+.formHeading .foot {
   height: 4px;
   width: 32px;
   border-radius: 2px;
@@ -34,47 +41,90 @@
 }
 
 .lastRow {
-    height: auto;
-    margin: 15px 25px;
+  height: auto;
+  padding: 15px 25px;
 }
 
 .radioHeading {
-    font-size: 26px;
-    font-weight: 500;
+  font-size: 26px;
+  font-weight: 500;
 }
 
 .radioInput {
-    display: flex;
+  display: flex;
 }
 
 .radioChoice {
-    margin: 15px 110px 15px 0;
-    display: flex;
-    align-items: center;
+  margin: 15px 110px 15px 0;
+  display: flex;
+  align-items: center;
 }
 
 .radioChoice input {
-    height: 18px;
-    width: 18px;
-    color: grey;
+  height: 18px;
+  width: 18px;
+  color: grey;
 }
 
 .radioChoice label {
-    font-size: 18px;
-    margin: 0 10px;
+  font-size: 18px;
+  margin: 0 10px;
 }
 
 .buttonContainer {
-    margin: 20px 0 50px 0;
+  width: 100%;
+  margin: 20px 0 50px 0;
+  padding: 0 25px;
 }
 
 .buttonContainer button {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 4px;
+  background-image: linear-gradient(to right, #72b6e3, #9a5bb4);
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 800px) {
+  .registerpage {
+    height: auto;
+    background-image: linear-gradient(white, white);
+  }
+  .formBox {
+    border-radius: 0;
+  }
+  .formHeading {
+    display: flex;
+    justify-content: center;
+  }
+  .row {
+    display: block;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .lastRow {
     width: 100%;
-    height: 50px;
-    border: none;
-    border-radius: 4px;
-    background-image: linear-gradient(to right, #72b6e3, #9a5bb4);
-    color: white;
-    font-size: 20px;
-    font-weight: 500;
+  }
+  .radioInput {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .radioChoice {
+    margin: 15px 0 15px 0;
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .radioChoice label {
+    font-size: 16px;
+  }
 }

@@ -58,8 +58,10 @@ const Register = () => {
       <div className={classes.formBox}>
         <form className={classes.form} onSubmit={formSubmitHandler}>
           <div className={classes.formHeading}>
-            <p>Registration</p>
-            <div></div>
+            <div>
+              <p>Registration</p>
+              <div className={classes.foot}></div>
+            </div>
           </div>
 
           <div className={classes.row}>
@@ -151,9 +153,9 @@ const Register = () => {
                 <label for="nottosay">Prefer not to say</label>
               </div>
             </div>
-            <div className={classes.buttonContainer}>
-              <button type="submit">Register</button>
-            </div>
+          </div>
+          <div className={classes.buttonContainer}>
+            <button type="submit">Register</button>
           </div>
         </form>
       </div>
